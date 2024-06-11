@@ -26,7 +26,7 @@ def main():
     model_checkpoint = ModelCheckpoint('../model/best_model.h5', save_best_only=True)
 
     # Train the model
-    history = my_model.fit(train_data, epochs=3, validation_data=val_data,
+    history = my_model.fit(train_data, epochs=100, validation_data=val_data,
                            callbacks=[early_stopping, model_checkpoint])
 
     # Evaluate the model on the test set

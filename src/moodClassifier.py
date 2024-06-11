@@ -28,7 +28,7 @@ def clean_data(data_dir):
                     os.remove(imagePath)
                 else:
                     image_size_kb = os.path.getsize(imagePath) / 1024
-                    if image_size_kb < 3:
+                    if image_size_kb < 2:
                         print(f"Removing {imagePath} (size: {image_size_kb:.2f} KB)")
                         os.remove(imagePath)
             except Exception as e:
